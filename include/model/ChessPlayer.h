@@ -11,11 +11,17 @@
 
 
 class ChessPlayer {
-    std::string *name;
-    std::vector<ChessPlayer> *eatenPieces;
+    std::string name;
+    std::vector<ChessPiece *> eatenPieces;
 
 public:
-    ChessPlayer(std::string name);
+    explicit ChessPlayer(std::string name);
+
+    [[nodiscard]]
+    std::string getName() const;
+
+    void setName(std::string name);
+
 };
 
 

@@ -4,15 +4,16 @@
 
 #include "../../include/model/ChessGame.h"
 
-ChessGame::ChessGame(const std::string &player1, const std::string &player2) {
-    this->players = new ChessPlayer[2]();
-    this->players[0] = new ChessPlayer(player1);
-    this->players[1] = new ChessPlayer(player2);
-    this->board = new ChessBoard();
+ChessGame::ChessGame(const std::string &player1, const std::string &player2)
+    : players{ChessPlayer(player1), ChessPlayer(player2)}, board(ChessBoard()) {
 }
 
-ChessGame::~ChessGame() {
-    delete this->players;
-    delete this->board;
+ChessPlayer *ChessGame::getFirstPlayer() {
+
+    return this->players;
 }
 
+
+ChessPlayer ChessGame::getSecondPlayer() const {
+    return this->players[1];
+}
