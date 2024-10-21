@@ -7,7 +7,7 @@
 #include "../../include/model/ChessPlayer.h"
 
 ChessPlayer::ChessPlayer(std::string name)
-    : name(std::move(name)), eatenPieces(new std::vector<ChessPlayer *>) {
+    : name(std::move(name)), eatenPieces(std::vector<ChessPiece *>()) {
 }
 
 std::string ChessPlayer::getName() const {

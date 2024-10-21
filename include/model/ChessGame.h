@@ -10,18 +10,20 @@
 
 class ChessGame {
     ChessPlayer players[2];
-    const ChessBoard board;
+    ChessBoard board;
 
 public:
-    ChessGame(const std::string &player1, const std::string &player2);
+    explicit ChessGame(const std::string &player1, const std::string &player2);
 
     ~ChessGame() = default;
 
     [[nodiscard]]
-    const ChessPlayer *getFirstPlayer();
+    ChessPlayer *getFirstPlayer();
 
     [[nodiscard]]
     ChessPlayer *getSecondPlayer();
+
+    ChessBoard *getBoard();
 };
 
 

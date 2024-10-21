@@ -9,11 +9,14 @@ ChessGame::ChessGame(const std::string &player1, const std::string &player2)
 }
 
 ChessPlayer *ChessGame::getFirstPlayer() {
-
-    return this->players;
+    return &this->players[0];
 }
 
 
-ChessPlayer ChessGame::getSecondPlayer() const {
-    return this->players[1];
+ChessPlayer *ChessGame::getSecondPlayer() {
+    return &this->players[1];
+}
+
+ChessBoard *ChessGame::getBoard() {
+    return &this->board;
 }
