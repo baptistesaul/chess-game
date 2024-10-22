@@ -4,8 +4,6 @@
 
 #include "../../include/model/ChessBoard.h"
 
-ChessBoard::ChessBoard() : tables{} {
-    for (auto &table: this->tables) {
-        table = nullptr;
-    }
+ChessBoard::ChessBoard()
+    : pieces(std::vector<ChessPiece *>()) {
 };

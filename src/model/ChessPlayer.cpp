@@ -17,3 +17,7 @@ std::string ChessPlayer::getName() const {
 void ChessPlayer::setName(std::string name) {
     this->name = std::move(name);
 }
+
+void ChessPlayer::eatPiece(ChessPiece *piece) {
+    this->eatenPieces.push_back(piece);
+}

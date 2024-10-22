@@ -22,6 +22,8 @@ public:
 
     void setName(std::string name);
 
+    void eatPiece(ChessPiece *piece);
+
 };
 
 

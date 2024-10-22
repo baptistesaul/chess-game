@@ -19,7 +19,23 @@ set(SOURCES main.cpp
         src/model/ChessPlayer.cpp
         include/model/ChessPlayer.h
         src/model/pieces/ChessPawn.cpp
-        include/model/pieces/ChessPawn.h)
+        include/model/pieces/ChessPawn.h
+        src/Controller.cpp
+        include/Controller.h
+        src/view/tools/View.cpp
+        include/view/tools/View.h
+        src/view/GameView.cpp
+        include/view/GameView.h
+        src/view/tools/MainPanel.cpp
+        include/view/tools/MainPanel.h
+        src/view/component/BoardPanel.cpp
+        include/view/component/BoardPanel.h
+        src/view/component/SideBarPanel.cpp
+        include/view/component/SideBarPanel.h
+        src/view/tools/Component.cpp
+        include/view/tools/Component.h
+        src/view/component/TileButton.cpp
+        include/view/component/TileButton.h)
 set(HEADERS)
 set(UI)
 

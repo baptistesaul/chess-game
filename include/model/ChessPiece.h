@@ -6,14 +6,22 @@
 #define PIECE_H
 #include <string>
 
-
-class ChessPiece {
-    std::string name;
-
-public:
-    ChessPiece(std::string name);
+enum ChessPieceType {
+    PAWN,
+    ROOK,
+    KNIGHT,
+    BISHOP,
+    QUEEN,
+    KING,
 };
 
+class ChessPiece {
+    int x;
+    int y;
+
+public:
+    ChessPiece(const int &x, const int &y);
+};
 
 
 #endif //PIECE_H

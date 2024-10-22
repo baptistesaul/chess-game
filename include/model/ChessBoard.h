@@ -4,16 +4,20 @@
 
 #ifndef CHESSBOARD_H
 #define CHESSBOARD_H
+#include <vector>
+
 #include "ChessPiece.h"
 
 
 class ChessBoard {
-    ChessPiece *tables[64];
+    std::vector<ChessPiece *> pieces;
 
 public:
     explicit ChessBoard();
 
     ~ChessBoard() = default;
+
+
 };
 
 
